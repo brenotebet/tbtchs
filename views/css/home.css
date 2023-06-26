@@ -1,0 +1,354 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Baloo';
+    src: url('/fonts/Baloo-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}       
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+    background-color: beige;
+    background-size: cover;
+    margin: 0; 
+}
+
+li {
+    list-style: none;
+    font-family: 'Roboto';
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: beige;
+    padding: 1rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-family: 'Baloo';
+    color: black; 
+}
+
+.toggle-btn img {
+    width: 70px;
+}
+
+.navbar .toggle-btn {
+    color: black;
+    cursor: pointer;
+    margin-left: auto; 
+    margin-right: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.action-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: scale 0.2s ease;
+}
+
+.action-btn a {
+    color: white;
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.about-section {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Roboto';
+    margin-top: 50px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+  
+  
+.languages-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+  
+.languages-container img {
+    max-width: 50px;
+    height: auto;
+}
+
+.tech-text {
+    font-family: 'Roboto';
+    margin-right: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: darkgray;
+}
+
+.menu-img {
+    width: 70px;
+}
+
+.home-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: left;
+    padding: 70px;
+}
+
+.home-content {
+    width:100%; 
+    min-height: 100vh;
+    background-color: darksalmon;
+    padding: 70px;
+}
+
+
+.portifolio-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: darksalmon;
+    min-height: 100vh;
+    font-family: 'Roboto';
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portifolio-container h1 {
+    display: flex;
+    font-size: 50px;
+}
+
+.portifolio-title {
+    display: flex;
+    margin: 70px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-box {
+    font-family: 'Roboto';
+}
+
+.text-box h2 {
+    font-size: 24px;
+}
+
+.portifolio-title img {
+    max-width: 400px;
+    float: left;
+    margin: 15px;
+    border: 3px solid black;
+}
+
+.home-title h1 {
+    margin-left: 20px;
+    color: black;
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-div .logo {
+    margin-bottom: 50px;
+    margin-right: 400px;
+    font-family: 'Baloo';
+}
+
+.text-under-title {
+    margin-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: inline-block;
+}
+
+.text-under-title a {
+    color: black;
+}
+
+.text-under-title .learn-more {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+    .home-title {
+      font-size: 24px;
+    }
+    .home-content {
+      height: auto;
+      padding: 70px;
+    }
+    .about-section {
+      flex-direction: column;
+      height: auto;
+      padding: 70px;
+    }
+    .about-section-text,
+    .languages-container {
+      margin-right: 0;
+      text-align: center;
+    }
+    .languages-container img {
+      margin: 5px;
+    }
+    .portifolio-container,
+    .portifolio-title {
+        padding: 70px;
+      flex-direction: column;
+      height: auto;
+    }
+    .portifolio-title img {
+      max-width: 100%;
+      margin: 15px 0;
+    }
+
+    .contact-me-container{
+        padding: 70px;
+    }
+}
+
+  body.menu-open .toggle-btn {
+    opacity: 0; 
+}
+  
+ 
+  @media only screen and (max-width: 600px) {
+    .navbar .logo {
+      margin-right: 0;
+    }
+    .toggle-btn img {
+      width: 40px;
+      margin-left: 10px;
+    }
+    .dropdown-menu {
+      right: 1rem;
+      top: 70px;
+    }
+  }
+
+.dropdown-menu {
+    width: 100%;
+    color: black;
+    display: none;
+    position: absolute;
+    right: 5.5rem;
+    top: 90px;
+    width: 300px;
+    background: beige;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    height: 0;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu a {
+    color: black;
+    font-family: 'Roboto';
+}
+
+.dropdown-menu.open {
+    height:180px;
+}
+
+.dropdown-menu ul {
+    margin: 0; 
+    padding: 0; 
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.dropdown-menu {
+    display: block;
+}
+
+.contact-me-container h1 {
+    text-align: left;
+    font-size: x-large;
+}
+
+.contact-me-container {
+    margin-top: 50px;
+    height: 20rem;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    text-align: left;
+    font-family: 'Roboto'; 
+}
+
+.contact-options {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    font-size: large;
+    margin-right: 10px;
+}
+
+.contact-options img {
+    padding: 0;
+    width: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-options img:hover {
+    transform: scale(1.1);
+}

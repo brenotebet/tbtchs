@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta charset="UTF-8">
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="logo"><a href="#">TBTCHS</a></div>
+        <div class="toggle-btn">
+            <img src="/images/menu.png" alt="menu">
+        </div>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="quote">Get a Quote</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+                <li><a href="#" class="action-btn">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const toggleBtnIcon = document.querySelector('.toggle-btn img');
+    const dropDownMenu = document.querySelector('.dropdown-menu');
+    const body = document.querySelector('body');
+
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+        body.classList.toggle('menu-open');
+    }
+
+    body.addEventListener('click', function (event) {
+        if (!dropDownMenu.contains(event.target) && !toggleBtn.contains(event.target)) {
+            dropDownMenu.classList.remove('open');
+            body.classList.remove('menu-open');
+    }
+})
+
+</script> 
+
+<div class="home-content">
+    <div class="home-title">
+        <h1>Hi, My name is Breno. &#128075</h1>
+        <h1>Current student, programming enthusiast.</h1>
+        <div class="text-under-title">
+            <p>Want to check out some of my path from my coding journey? Click on the hyperlink below.</p>
+            <a class="learn-more" href="#about">Learn more.</a>
+        </div>
+    </div>
+</div>
+
+<div class="about-section" id="about">
+    <div class="about-section-text">
+        <p>My name is Breno Tebet, a passionate student from Brazil,</p>
+        <p>avid programmer, and a lifelong learner.</p>
+        <p>By no means I am an expert, however, I am continuously expanding my</p>
+        <p>knowledge and skills in the ever-evolving world of programming!</p>
+    </div>
+    <div class="languages-container">
+        <h1 class="tech-text">Ongoing Tech Stack </h1>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg">
+      </div>
+</div>
+<div class="portifolio-container">
+    <h1>Portfolio </h1>
+    <div class="portifolio-title">
+        <img src="images/ocacwebsite.jpg" alt="ocac">
+        <div class="text-box">
+            <h2>OCAC Website</h2>
+            <p>Orange County Aquatic Conference is a aquatics club</p>
+            <p>that provides lessons and runs different teams,</p>
+            <p>this project envolves login systems, payments, and</p>
+            <p>many other functionalities such as booking classes.</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="contact-me-container" id="contactus">
+        <h1>Don't be shy, contact me &#128513</h1>
+        <h2>I am always looking for opportunities to learn and work.<h2>
+            <div class="contact-options">
+                <h2>Here's how you can reach out: </h2>
+                    <a href="https://www.linkedin.com/in/breno-tebet-93615120b/">
+                        <img src="images/linkedIn.png" alt="linkedIn">
+                    </a>
+                    <a href="https://github.com/brenotebet">
+                        <img src="images/github.png" alt="github">
+                    </a> 
+            </div>
+    </div>
+</footer>
+</body>
+</html>
