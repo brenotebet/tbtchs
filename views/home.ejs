@@ -2,7 +2,6 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta charset="UTF-8">
 </head>
@@ -16,7 +15,7 @@
         <div class="dropdown-menu">
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="quote">Get a Quote</a></li>
+                <li><a href="#" class="dialog-btn">Get a Quote</a></li>
                 <li><a href="#contactus">Contact Us</a></li>
                 <li><a href="#" class="action-btn">Get Started</a></li>
             </ul>
@@ -24,32 +23,12 @@
     </div>
 </header>
 
-<script>
-    const toggleBtn = document.querySelector('.toggle-btn');
-    const toggleBtnIcon = document.querySelector('.toggle-btn img');
-    const dropDownMenu = document.querySelector('.dropdown-menu');
-    const body = document.querySelector('body');
-
-    toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open');
-        body.classList.toggle('menu-open');
-    }
-
-    body.addEventListener('click', function (event) {
-        if (!dropDownMenu.contains(event.target) && !toggleBtn.contains(event.target)) {
-            dropDownMenu.classList.remove('open');
-            body.classList.remove('menu-open');
-    }
-})
-
-</script> 
-
 <div class="home-content">
     <div class="home-title">
         <h1>Hi, My name is Breno. &#128075</h1>
         <h1>Current student, programming enthusiast.</h1>
         <div class="text-under-title">
-            <p>Want to check out some of my path from my coding journey? Click on the hyperlink below.</p>
+            <p>Want to check out some of my coding journey path? Click on the hyperlink below.</p>
             <a class="learn-more" href="#about">Learn more.</a>
         </div>
     </div>
@@ -64,10 +43,10 @@
     </div>
     <div class="languages-container">
         <h1 class="tech-text">Ongoing Tech Stack </h1>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg">
+        <img src="images/css.png">
+        <img src="images/html.png">
+        <img src="images/js.png">
+        <img src="images/cpp.png">
       </div>
 </div>
 <div class="portifolio-container">
@@ -83,6 +62,23 @@
         </div>
     </div>
 </div>
+
+    <dialog class="dialog-inputs" id="dialog-inputs">
+        <div class="dialog-container">
+            <h1>Let me know! &#128187</h1>
+            <img src="images/x.png" alt="x" id="closing-btn">
+        </div>
+        <p>Write me an email that explains what would you like from me,</p>
+        <p>I could develop your own website using methods I am learning daily.<p>
+        <p>Any tips you think it would be useful for my coding adventures are welcome as well!</p>
+        <form action="/submit" method="post">
+            <input type="text" name="fullName" class="name-input" placeholder="Full Name" required>
+            <input type="email" name="email" class="email-input" placeholder="Email" required>
+            <input type="text" name="content" class="description-input" placeholder="Share your thoughts..." required>
+            <button class="submit-btn" type="submit">Submit</button>  
+        </form>
+    </dialog>
+
 <footer>
     <div class="contact-me-container" id="contactus">
         <h1>Don't be shy, contact me &#128513</h1>
@@ -98,5 +94,6 @@
             </div>
     </div>
 </footer>
+<script src="dropdown-menu.js"></script> 
 </body>
 </html>

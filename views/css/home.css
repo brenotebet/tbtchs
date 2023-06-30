@@ -352,3 +352,60 @@ a:hover {
 .contact-options img:hover {
     transform: scale(1.1);
 }
+
+.dialog-inputs {
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    transition: opacity 0.7s;
+    flex-direction: column;
+    font-family: 'Roboto';
+    background-color: beige;
+}
+
+.dialog-inputs[open] {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+  
+.dialog-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.dialog-container h1 {
+    margin: 0;
+}
+  
+#closing-btn {
+    margin-left: auto;
+    width: fit-content;
+    cursor: pointer;
+}
+
+  
+.name-input,
+.email-input,
+.description-input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.description-input {
+    height: 100px;
+}
+
+.submit-btn {
+    width: 30%;
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: scale 0.2s ease;
+}
