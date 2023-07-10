@@ -11,3 +11,5 @@ key.pem
 .dockerignore
 
 node_modules
+
+.github

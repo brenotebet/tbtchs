@@ -54,7 +54,7 @@ app.post('/submit', (req, res) => {
           res.send('Error sending email');
         } else {
           console.log('Email sent: ' + info.response);
-          res.send('Thank you for submitting the form!');
+          res.send('Thank you for submitting the form, I will be contact with you shortly!');
         }
       });
 

@@ -280,6 +280,7 @@ a:hover {
     backdrop-filter: blur(15px);
     overflow: hidden;
     height: 0;
+    margin-right: 0;
     transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -361,6 +362,9 @@ a:hover {
     flex-direction: column;
     font-family: 'Roboto';
     background-color: beige;
+    border: none;
+    box-shadow: 3px 3px 3px darkgray;
+    border-radius: 10px;
 }
 
 .dialog-inputs[open] {
@@ -368,7 +372,6 @@ a:hover {
     pointer-events: inherit;
 }
 
-  
 .dialog-container {
     display: flex;
     justify-content: space-between;
